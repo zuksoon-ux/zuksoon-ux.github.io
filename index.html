@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조승완 포트폴리오</title>
+    <style>
+      :root {
+        --bg: #060816;
+        --panel: #10172a;
+        --panel-2: #162033;
+        --text: #f3f6ff;
+        --muted: #94a3b8;
+        --accent: #6ee7f9;
+        --accent-2: #8b5cf6;
+        --line: rgba(255,255,255,0.1);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(110, 231, 249, 0.16), transparent 28%),
+          linear-gradient(135deg, var(--bg), #121b2f 55%, #0b1020);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 48px 22px 70px;
+      }
+
+      .hero {
+        position: relative;
+        background: linear-gradient(135deg, rgba(16, 23, 42, 0.98), rgba(22, 32, 51, 0.95));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 40px 38px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.04) 40%, transparent 100%);
+        pointer-events: none;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+        margin: 0 0 8px;
+        letter-spacing: -0.02em;
+      }
+
+      .hero .subtitle {
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        margin-bottom: 10px;
+      }
+
+      .hero p {
+        color: var(--muted);
+        margin: 0;
+        max-width: 760px;
+        font-size: 1.02rem;
+      }
+
+      .section {
+        margin-top: 22px;
+        background: rgba(16,23,42,0.9);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 24px 28px;
+        backdrop-filter: blur(8px);
+      }
+
+      .section h2 {
+        margin: 0 0 16px;
+        font-size: 1.16rem;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .section h2::before {
+        content: '✦';
+        color: var(--accent);
+      }
+
+      .info-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .info-item {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+
+      .info-item:last-child {
+        border-bottom: none;
+      }
+
+      .label {
+        font-weight: 700;
+        color: var(--accent);
+        min-width: 100px;
+      }
+
+      .card {
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+
+      .card:last-child {
+        border-bottom: none;
+      }
+
+      .card h3 {
+        margin: 0 0 6px;
+        font-size: 1.04rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .badge {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 6px 10px;
+        background: linear-gradient(90deg, rgba(110, 231, 249, 0.16), rgba(139, 92, 246, 0.16));
+        color: var(--accent);
+        border: 1px solid rgba(110, 231, 249, 0.22);
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      @media (max-width: 640px) {
+        .hero { padding: 24px; }
+        .hero h1 { font-size: 1.9rem; }
+        .section { padding: 20px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero">
+        <div class="subtitle">Portfolio</div>
+        <h1>조승완</h1>
+        <p>
+          지속 가능한 프로젝트를 이끌고, 팀과 함께 목표를 성취하는 것을 중요하게 생각하는
+          엔지니어입니다. GM TCK에서 경험을 쌓으며 프로젝트 리더로서 책임 있는 역할을 수행했습니다.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>기본 정보</h2>
+        <div class="info-list">
+          <div class="info-item"><span class="label">이름</span><span>조승완</span></div>
+          <div class="info-item"><span class="label">소속기관</span><span>GMTCK</span></div>
+          <div class="info-item"><span class="label">학력</span><span>2023년 기계공학과 학사</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>프로젝트 이력</h2>
+        <div class="card">
+          <h3>GM L234 프로젝트 리드</h3>
+          <p>프로젝트의 전반적인 방향 설정과 협업 관리, 일정과 품질을 고려한 리더십을 발휘했습니다.</p>
+          <span class="badge">Project Lead</span>
+        </div>
+        <div class="card">
+          <h3>Resiliency project 리드</h3>
+          <p>시스템의 안정성과 대응성을 높이는 관점에서 프로젝트를 이끌며, 문제 해결과 실행력을 중심으로 활동했습니다.</p>
+          <span class="badge">Leadership</span>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
